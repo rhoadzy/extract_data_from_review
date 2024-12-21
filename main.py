@@ -1,6 +1,8 @@
 import streamlit as st
-from langchain import PromptTemplate
+from langchain_core.prompts import PromptTemplate
+
 from langchain_openai import OpenAI
+
 
 
 template = """\
@@ -112,6 +114,7 @@ if review_input:
         review=review_input
     )
 
-    key_data_extraction = llm(prompt_with_review)
+    key_data_extraction = llm.invoke(prompt_with_review)
+
 
     st.write(key_data_extraction)
