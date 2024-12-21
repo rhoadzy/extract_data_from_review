@@ -1,0 +1,4 @@
+python 
+streamlit
+langchain 
+langchain-openai 
